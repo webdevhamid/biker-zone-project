@@ -1,20 +1,197 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Biker Zone</title>
+    <!-- Google Font CDN  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Daisy UI + Tailwind CDN  -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+      .font-poppins {
+        font-family: "Poppins", "sans-serif";
+      }
+    </style>
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              // Custom Colors
+              "bike-primary": "#E76F51",
+              "bike-primary-bg": "rgba(231, 111, 81, 0.1)",
+            },
+          },
+        },
+      };
+    </script>
   </head>
-  <body>
+  <body class="font-poppins">
     <!-- Header section start  -->
-    <header>
+    <header class="md:container mx-auto">
       <!-- nav start  -->
-      <nav></nav>
+      <nav>
+        <div class="navbar bg-base-100">
+          <div class="navbar-start flex-1">
+            <div class="dropdown">
+              <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-5 w-5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M4 6h16M4 12h8m-8 6h16"
+                  />
+                </svg>
+              </div>
+              <ul
+                tabindex="0"
+                class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow font-medium"
+              >
+                <li><a>Home</a></li>
+                <li><a>Shop</a></li>
+                <li><a>News</a></li>
+                <li><a>Contact</a></li>
+              </ul>
+            </div>
+            <a class="text-3xl font-extrabold">Bike Dekho</a>
+          </div>
+          <div class="hidden lg:flex">
+            <ul class="menu menu-horizontal px-1 font-medium text-lg">
+              <li><a>Home</a></li>
+              <li><a>Shop</a></li>
+              <li><a>News</a></li>
+              <li><a>Contact</a></li>
+            </ul>
+          </div>
+          <div class="">
+            <a class="btn bg-bike-primary text-white">Login</a>
+          </div>
+        </div>
+      </nav>
       <!-- nav end  -->
+
+      <!-- Slider/Carousel section start -->
+      <div class="carousel w-full lg:h-[550px]">
+        <!-- Slider 01  -->
+        <div id="slide1" class="carousel-item relative w-full">
+          <!-- Slider content wrapper  -->
+          <div
+            class="flex flex-col lg:flex-row items-center justify-center p-5 lg:p-20 bg-bike-primary-bg"
+          >
+            <!-- Slider Left Content  -->
+            <div class="p-3 flex-1">
+              <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold">
+                Ride-on R15 V4 <br />
+                with Smile
+              </h1>
+              <p class="my-4 w-5/6">
+                Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit
+                officia consequat duis enim velit mollit.
+              </p>
+              <button class="btn bg-bike-primary text-white">Purchase</button>
+            </div>
+            <!-- Slider Right Content  -->
+            <div class="flex-1 p-5">
+              <img src="images/slider/bike1.png" class="w-[440px] mx-auto" />
+            </div>
+          </div>
+          <!-- Arrow (Left and Right) -->
+          <div
+            class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between"
+          >
+            <a href="#slide3" class="btn btn-circle">❮</a>
+            <a href="#slide2" class="btn btn-circle">❯</a>
+          </div>
+        </div>
+        <!-- Slider 02  -->
+        <div id="slide2" class="carousel-item relative w-full">
+          <!-- Slider content wrapper  -->
+          <div
+            class="flex flex-col lg:flex-row items-center justify-center p-5 lg:p-32 bg-bike-primary-bg"
+          >
+            <!-- Slider Left Content  -->
+            <div class="p-3 flex-1">
+              <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold">
+                Ride-on R15 V4 <br />
+                with Smile
+              </h1>
+              <p class="my-4 w-5/6">
+                Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit
+                officia consequat duis enim velit mollit.
+              </p>
+              <button class="btn bg-bike-primary text-white">Purchase</button>
+            </div>
+            <!-- Slider Right Content  -->
+            <div class="flex-1 p-5">
+              <img src="images/slider/bike2.png" class="w-[440px] mx-auto" />
+            </div>
+          </div>
+          <!-- Arrow (Left and Right) -->
+          <div
+            class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between"
+          >
+            <a href="#slide1" class="btn btn-circle">❮</a>
+            <a href="#slide3" class="btn btn-circle">❯</a>
+          </div>
+        </div>
+        <!-- Slider 03 -->
+        <div id="slide3" class="carousel-item relative w-full">
+          <!-- Slider content wrapper  -->
+          <div
+            class="flex flex-col lg:flex-row items-center justify-center p-5 lg:p-32 bg-bike-primary-bg"
+          >
+            <!-- Slider Left Content  -->
+            <div class="p-3 flex-1">
+              <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold">
+                Ride-on R15 V4 <br />
+                with Smile
+              </h1>
+              <p class="my-4 w-5/6">
+                Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit
+                officia consequat duis enim velit mollit.
+              </p>
+              <button class="btn bg-bike-primary text-white">Purchase</button>
+            </div>
+            <!-- Slider Right Content  -->
+            <div class="flex-1 p-5">
+              <img src="images/slider/bike3.png" class="w-[440px] mx-auto" />
+            </div>
+          </div>
+          <!-- Arrow (Left and Right) -->
+          <div
+            class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between"
+          >
+            <a href="#slide2" class="btn btn-circle">❮</a>
+            <a href="#slide1" class="btn btn-circle">❯</a>
+          </div>
+        </div>
+      </div>
+      <!-- Slider/Carousel section end -->
     </header>
     <!-- Header section end  -->
 
-    <main>
+    <!-- Main section start  -->
+    <main class="md:container mx-auto">
       <!-- Featured Bikes start  -->
       <!-- Featured Bikes end  -->
 
@@ -27,9 +204,10 @@
       <!-- FAQ section start  -->
       <!-- FAQ section end  -->
     </main>
-    <footer>
-      <!-- Footer section start  -->
-      <!-- Footer section end  -->
-    </footer>
+    <!-- Main section end  -->
+
+    <!-- Footer section start  -->
+    <footer></footer>
+    <!-- Footer section end  -->
   </body>
 </html>
